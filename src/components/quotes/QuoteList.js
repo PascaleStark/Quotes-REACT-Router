@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useHistory, useLocation } from "react-router";
 
 import QuoteItem from "./QuoteItem";

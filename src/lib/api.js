@@ -1,5 +1,5 @@
 const FIREBASE_DOMAIN =
-  "https://react-router-f7f73-default-rtdb.firebaseio.com/";
+  "https://react-router-f7f73-default-rtdb.firebaseio.com";
 
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
@@ -48,6 +48,7 @@ export async function addQuote(quoteData) {
     },
   });
   const data = await response.json();
+  console.log(data);
 
   if (!response.ok) {
     throw new Error(data.message || "Could not create quote.");

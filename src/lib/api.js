@@ -26,6 +26,7 @@ export async function getAllQuotes() {
 export async function getSingleQuote(quoteId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
   const data = await response.json();
+  console.log(data);
 
   if (!response.ok) {
     throw new Error(data.message || "Could not fetch quote.");
@@ -81,6 +82,7 @@ export async function getAllComments(quoteId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
 
   const data = await response.json();
+  console.log(data);
 
   if (!response.ok) {
     throw new Error(data.message || "Could not get comments.");

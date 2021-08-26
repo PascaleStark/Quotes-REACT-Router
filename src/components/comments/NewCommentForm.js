@@ -30,6 +30,7 @@ const NewCommentForm = (props) => {
 
     // send comment to server
     sendRequest(commentData);
+    commentTextRef.current.value = "";
   };
 
   return (

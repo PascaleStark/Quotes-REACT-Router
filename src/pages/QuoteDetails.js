@@ -19,11 +19,12 @@ const QuoteDetails = () => {
   // console.log(location);
   console.log(match);
   const params = useParams();
-  console.log(params);
+
+  const { quoteId } = params;
 
   useEffect(() => {
-    sendRequest(params.quoteId);
-  }, [sendRequest]);
+    sendRequest(quoteId);
+  }, [sendRequest, quoteId]);
 
   if (status === "pending") {
     return (
